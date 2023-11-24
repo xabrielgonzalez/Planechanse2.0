@@ -1,0 +1,61 @@
+body {
+    background: url(blacklotus.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .cardinfo {
+    max-width: 80%;
+    color: #F5FFC9;
+    font-weight: bold;
+  }
+  
+  #draw-button {
+    background-color: brown;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 18px;
+  }
+  
+  #parent-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  
+  #card-container {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #backgroundbutton{
+  background: transparent;
+  border: 0;
+  }
+
+  
+  
+  @media only screen and (min-width: 600px) {
+    #parent-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+    }
+  
+    #card-container {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media only screen and (min-width: 900px) {
+    #parent-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
