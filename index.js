@@ -1,5 +1,5 @@
 let cardDeck = Array.from({ length: 67 }, (_, i) => ({
-  image: `plane${i + 1}.png`,
+  image: `plane${i + 1}.webp`,
 }));
 
 let cardsDrawn = 0;
