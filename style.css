@@ -40,6 +40,53 @@ body {
   border: 0;
   }
 
+  /* --- Estilos para la Escena 3D del Dado --- */
+
+.scene {
+    width: 150px; /* Tamaño del contenedor de la escena */
+    height: 150px;
+    margin: 50px auto;
+    perspective: 800px; /* Define la profundidad 3D */
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* La clave: permite que los hijos (caras) se posicionen en 3D */
+    transform-style: preserve-3d;
+    transition: transform 1.5s ease-out; /* Para la animación de "rodaje" */
+}
+
+.face {
+    position: absolute;
+    width: 150px; /* Igual al .scene */
+    height: 150px; /* Igual al .scene */
+    line-height: 150px;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid black;
+    background: #f0f0f0;
+    color: #333;
+    opacity: 0.9;
+}
+
+/* Posicionamiento de las Caras */
+/* translateZ mueve la cara a la mitad de su tamaño (75px) */
+.one { transform: translateZ(75px); }
+.six { transform: rotateY(180deg) translateZ(75px); }
+.two { transform: rotateY(90deg) translateZ(75px); }
+.five { transform: rotateY(-90deg) translateZ(75px); }
+.three { transform: rotateX(90deg) translateZ(75px); }
+.four { transform: rotateX(-90deg) translateZ(75px); }
+
+/* --- Estilos de Botones (Opcional) --- */
+#draw-button, #roll-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
   
   
   @media only screen and (min-width: 600px) {
